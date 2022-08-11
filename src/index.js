@@ -9,16 +9,9 @@ import getVisibleExpenses from './selectors/expenses'
 
 const store = configureStore()
 
-// store.dispatch(addExpense({ description: 'water bill' }))
-// store.dispatch(addExpense({ description: 'gas bill'}))
-
-// store.dispatch(setTextFilter('bill'))
-// store.dispatch(setTextFilter('water'))
-
-const state = store.getState()
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpenses)
-
+store.dispatch(addExpense({ description: 'water bill', amount: 400 }))
+store.dispatch(addExpense({ description: 'gas bill'}))
+store.dispatch(addExpense({ description: 'rent', amount: 1300 }))
 
 ReactDOM.render(
   <React.StrictMode>
